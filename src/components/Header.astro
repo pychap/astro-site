@@ -1,0 +1,29 @@
+---
+import '../styles/header.css';
+import logo from '../images/logo.svg';
+import SunIcon from '@astropub/icons/Sun'
+export interface Props {
+  'fill'?: string;
+  'height'?: number | string;
+}
+
+const { fill = "#fff", height = "24px" } = Astro.props as Props;
+---
+
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <a href="/">
+        <SunIcon fill={fill} height={height} />
+        <!-- <img src={logo} alt="" /> -->
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/blog">Blog</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
