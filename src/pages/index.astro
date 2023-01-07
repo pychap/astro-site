@@ -1,10 +1,11 @@
 ---
+import Showcase from '../components/Showcase.astro';
 import Layout from '../layouts/Layout.astro';
-
-
+import Features from '../components/Features.astro';
 ---
 
 <Layout>
-  <!-- <SunIcon /> -->
-  <h1>The beginning, Astro site. {1 + 1}</h1>
+  <Showcase showExtra={true} />
+  <Features />
+  <h1>The beginning, Astro site.</h1>
 </Layout>
