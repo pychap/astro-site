@@ -14,6 +14,7 @@ const posts = await Astro.glob('../posts/*.md')
         posts.map((post) => (
           <Card>
             <h3>{post.frontmatter.title}</h3>
+            <h4>Written by {post.frontmatter.author} on {new Date(post.frontmatter.date).toLocaleDateString()}</h4>    
             <p>{post.frontmatter.excerpt}</p>
             <a class="btn" href={`/${post.frontmatter.slug}`}>Read the article here</a>
           </Card>
